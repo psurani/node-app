@@ -9,9 +9,9 @@ pipeline {
                 git 'https://github.com/psurani/node-app.git'
             }
         }
-        stage("Second Stage"){
+        stage("Maven build"){
             steps{
-                echo "This is stage 2"
+                echo "mvn clean package"
             }
         }
     }
