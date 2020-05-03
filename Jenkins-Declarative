@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         MY_VAR = "my first environment variable"
+        PATH = "/opt/maven3/bin:$PATH"
     }
     stages{
         stage("Checking out"){
