@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    environment {
+        MY_VAR = "my first environment variable"
+    }
+    stages{
+        stage("Checking out"){
+            steps{
+                git 'https://github.com/psurani/node-app.git'
+            }
+        }
+        stage("Second Stage"){
+            steps{
+                echo "This is stage 2"
+            }
+        }
+    }
+}
